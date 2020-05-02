@@ -96,10 +96,8 @@ namespace MiaofansCommonLibrary
 		BigInt<N> sum = 0;
 		BigInt<N> carry = 0;
 		while (b)
-		{
-			//对应位的和 
+		{ 
 			sum = a ^ b;
-			//对应位和的进位，既然是进位，就要整体左移一位
 			carry = (a & b) << 1;
 			a = sum;
 			b = carry;
